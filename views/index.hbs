@@ -1,0 +1,28 @@
+<h1 class="text-secondary font-weight-bold ml-5">Posts</h1>
+        <div class="row posts">
+        {{#each posts}}
+            
+            <div class="col-md-8 col-sm-8 mb-3 ml-5">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        Ezz aldin
+                    <form action="/remove/{{this._id}}" method="POST">
+                            <button class="btn btn-outline-danger ed deleteBtn">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                    </form>
+                    </div>
+                <div class="card-body">
+                    <p class="card-text">{{this.description}}</p>
+                    <a href="/comment/{{this._id}}">
+                    <button type="button" class="btn btn-secondary btn-lg">Comment <i class="fas fa-comments"></i></button>
+                    </a>
+                        <a href="/edit/{{this._id}}" class="btn btn-outline-secondary ed1">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                 </div>
+                </div>
+             </div>
+             {{/each}}
+            </div>
+    
